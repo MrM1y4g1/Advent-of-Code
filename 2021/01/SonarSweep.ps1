@@ -1,5 +1,3 @@
-Import-Module Pester
-
 function Get-TotalDepthIncreasments {
     param (
         [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
@@ -51,5 +49,5 @@ Function Get-SummerizeRollingValues{
 }
 
 
-Get-Content "$($PSScriptRoot)\input.txt" | Get-TotalDepthIncreasments
-Get-Content "$($PSScriptRoot)\input.txt" | Get-SummerizeRollingValues -WindowSize 3 | Get-TotalDepthIncreasments
+#Get-Content "$($PSScriptRoot)\input.txt" | Get-TotalDepthIncreasments
+#Get-Content "$($PSScriptRoot)\input.txt" | Get-SummerizeRollingValues -WindowSize 3 | Get-TotalDepthIncreasments
