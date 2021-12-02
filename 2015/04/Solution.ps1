@@ -41,6 +41,7 @@ function Get-LowestSaltSuffix {
             $iNumber += 1
 
             $sCurrentCode = ("$($SecretKey)$($iNumber)" | Get-MD5Hash).Substring(0, $HowManyZeros)
+            Write-Host "$iNumber`r" -NoNewline
         }
         until ($sCurrentCode -eq $sLikeString)
 
